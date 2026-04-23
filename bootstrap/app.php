@@ -5,11 +5,6 @@ use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 use App\Http\Middleware\HandleInertiaRequests;
 
-use Illuminate\Support\Facades\Gate;
-use App\Models\Workshop;
-use App\Policies\WorkshopPolicy;
-
-
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
         web: __DIR__.'/../routes/web.php',

@@ -13,7 +13,7 @@ class WorkshopController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Workshops/Index', [
+        return Inertia::render('Dashboard', [
             'workshops' => Workshop::latest()->get()
         ]);
     }
@@ -44,7 +44,7 @@ class WorkshopController extends Controller
 
         Workshop::create($validated);
 
-        return redirect()->route('workshops.index');
+        return redirect()->route('dashboard');
 
     }
 
@@ -90,6 +90,6 @@ class WorkshopController extends Controller
         
         $workshop->delete();
 
-        return redirect()->route('workshops.index');
+        return redirect()->route('dashboard');
     }
 }
